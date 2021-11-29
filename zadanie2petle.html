@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="" method="post">
+            <input type="number" name="jed" class="jeden"/>
+            <input type="number" name="dw" class="jeden" />
+            <input type="submit" value="POKAZ LICZBY" class="dwa" />
+        </form>
+        <div class="w"></div>
+
+        <script>
+
+            const formularz = document.querySelector('form');
+            const div = document.querySelector('div.w');
+
+            formularz.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const poczatekPrzedzialu = document.querySelector('input[name="jed"]').value * 1;
+                const koniecPrzedzialu = document.querySelector('input[name="dw"]').value * 1;
+
+                for (let i = poczatekPrzedzialu; i <= koniecPrzedzialu; i++) {
+                    if (i % 5 == 0) div.textContent += i + ' ';
+                 }
+                });
+
+        </script>
+
+    <style>
+     .jeden{
+         width: 130px;
+         height: 30px;
+     }
+     .dwa{
+         width: 130px;
+         height: 42px;
+         background-color: black;
+         color: white;
+         font-family: 'Oswald', sans-serif;
+         
+     }
+    
+    </style>
+    </body>
+</html>

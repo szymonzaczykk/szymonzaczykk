@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let a = prompt("PODAJ PIERWSZA LICZBE");
+    let b = prompt("PODAJ DRUGA LICZBA");
+    let zmienna = 0;
+    while (a != b) {
+         if (a < b) {
+           zmienna = a; a = b; b = zmienna;
+         }
+         a = a - b;
+       }
+       document.write("NWD DLA TYCH LICZB "+a);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" method="POST">
+
+     <input type="number" name="l1" placeholder="LICZBA1"/>
+     <input type="number" name="l2" placeholder="LICZBA2"/>
+     <input type="submit" value="WYSWIETL"/>
+
+    </form>
+
+<div class="wynik"></div>
+
+<script>
+
+//ZADANIE1
+
+ const formularz = document.querySelector("form");
+ const divwynik = document.querySelector(".wynik");
+
+ const wyswietl = function(x){
+      return`${x}`;
+ }
+ 
+  formularz.addEventListener("submit", (e)=>{
+     e.preventDefault();
+      const text1 = document.querySelector('input[name="t1"]').value;
+      divwynik.textContent=wyswietl(text1);
+  })
+
+//ZADANIE2
+
+// const formularz = document.querySelector("form");
+// const divwynik = document.querySelector(".wynik");
+ 
+// const sumuj = function(x, y){
+//     return`Suma liczb ${x} i ${y} wynosi: ${x+y}`;
+// }
+
+// formularz.addEventListener("submit", (e)=>{
+//     e.preventDefault();
+//     const LICZBA1 = document.querySelector('input[name="l1"]').value*1;
+//     const LICZBA2 = document.querySelector('input[name="l2"]').value*1;
+
+//     divwynik.textContent=sumuj(LICZBA1, LICZBA2);
+// })
+
+//ZADANIE3
+
+// const formularz = document.querySelector("form");
+// const divwynik = document.querySelector(".wynik");
+ 
+// const sumuj = function(x, y){
+//    return`Suma liczb ${x} i ${y} wynosi: ${x+y} a suma podniesiona do trzeciej potegi wynosi: ${(x+y)*(x+y)*(x+y)}`;
+// }
+
+// formularz.addEventListener("submit", (e)=>{
+//      e.preventDefault();
+//     const LICZBA1 = document.querySelector('input[name="l1"]').value*1;
+//     const LICZBA2 = document.querySelector('input[name="l2"]').value*1;
+
+//      divwynik.textContent=sumuj(LICZBA1, LICZBA2);
+//  })
+
+
+
+//SPRZAD1
+
+// let x=10;
+// while(x<=200){
+//     if(x%5==0) {
+//         document.write(x);
+//     }
+//     x++;
+// }
+
+//SPRZAD2
+
+// let wynik = 0;
+// for(let i=100;i<=110;i++){
+// wynik=wynik+i;
+// }
+// document.writeln("SREDNIA TO"+(wynik/10));
+
+</script>
+</body>
+</html>

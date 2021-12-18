@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zadanie4</title>
+</head>
+
+<body>
+<script>
+	
+kalkulator();
+	
+function kalkulator(){
+	
+let liczba1 = prompt("PODAJ PIERWSZA LICZBE");
+let liczba2 = prompt("PODAJ DRUGA LICZBE");
+var dzialanie = prompt("WYBIERZ DZIALANIE WYBIERAJAC: dodawanie, odejmowanie, mnozenie, dzielenie");
+var wybor = dzialanie.toLowerCase();
+let wynik = 0;
+
+	
+switch(wybor){
+
+	case 'dodawanie':
+		wynik=(liczba1*1)+(liczba2*1);
+		break;
+	case 'odejmowanie':
+		wynik=liczba1-liczba2;
+		break;
+	case 'mnozenie':
+		wynik=liczba1*liczba2;
+		break;
+	case 'dzielenie':
+		wynik=liczba1/liczba2;
+		break;
+}
+	return (document.writeln("WYNIK: "+wynik));
+}
+	
+</script>
+</body>
+</html>

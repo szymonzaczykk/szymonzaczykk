@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ZADANIE6</title>
+</head>
+
+<body>
+<script>
+
+ ileCyfr();
+	
+ function ileCyfr()
+ {
+ let liczba = prompt("PODAJ LICZBE");
+ var wynik = 0;
+ do{
+ liczba = Math.floor((liczba*1)/10);
+ wynik++;
+ } 
+ while(liczba>0);
+ return (document.writeln("WYNIK: "+wynik));
+ }
+	
+</script>
+</body>
+</html>

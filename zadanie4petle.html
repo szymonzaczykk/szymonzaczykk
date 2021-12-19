@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="utf-8">
+<title>zadanie</title>
 </head>
 <body>
-    <script>
+<script>
+	
+var liczba = prompt("LICZBA: ", "");
+var i = 1;
+var wynik = 1;
+while (i <= liczba) wynik *= i++;
+document.writeln("WYNIK: "+wynik);
 
-let x = prompt("PODAJ LICZBE:");
-let y = 1;
-let z = 1;
-
-while (y <= x) z *= y++;
-document.write("SILNIA Z "+ x + " TO " + z);
-
-    </script>
+</script>
 </body>
 </html>

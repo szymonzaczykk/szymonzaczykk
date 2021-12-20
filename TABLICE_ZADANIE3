@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>tabelezad3</title>
+</head>
+
+<body>
+<div class="tablica"></div>
+<br>
+<div class="suma"></div>
+<br>
+<div class="ilezer"></div>
+<br>
+<input type="number" name="liczba">
+<button>ILE RAZY</button>
+<br>
+<div class="ilerazy"></div>
+
+<script>
+
+  function getRandomIntInclusive(min, max) {
+
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+
+}
+
+    const diwtablica = document.querySelector('div.tablica');
+    const diwsuma = document.querySelector('div.suma');
+    const diwilezer = document.querySelector('div.ilezer');
+    const diwilerazy = document.querySelector('div.ilerazy');
+    const btn = document.querySelector('button');
+
+    const liczby = [];
+
+    let suma =0;
+
+    let ilezer = 0;
+
+    for(let i=0; i<100; i++){
+
+        liczby[i]=getRandomIntInclusive(0,100);
+        suma += liczby[i];
+    }
+
+    for (const liczba of liczby){
+
+         if(liczba==0)ilezer++; 
+    }
+
+    diwtablica.textContent=liczby.join(", ");
+    diwsuma.textContent="SUMA LICZB TABLICY WYNOSI: "+suma;
+    diwilezer.textContent="LICZB ZERO WYSTEPUJE: "+ilezer;
+
+    btn.addEventListener('click', function(){
+
+        const liczba = document.querySelector('input[name="liczba"]').value*1;
+        let ilerazy = 0;
+
+        for (const l of liczby){
+
+         if(l==liczba)ilerazy++; 
+    }
+
+        diwilerazy.textContent=Liczba ${liczba} w tablicy wystepuje ${ilerazy} razy;
+
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tablice</title>
+</head>
+
+<body>
+<div class="wynik1"></div>
+
+<script>
+	
+const diwwynik1 = document.querySelector('div.wynik1');
+	
+const tab1 = [];
+	
+for(let i=1; i<=100; i++){
+	if(i%2==0){
+		tab1.push(i);
+	}
+}
+for(let i=0; i<=100; i++){
+	if(i%2==1){
+		tab1.push(i);
+	}
+}
+	
+diwwynik1.textContent="LICZBY: "+tab1.join(", ");
+
+</script>
+</body>
+</html>

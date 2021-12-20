@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tablice</title>
+</head>
+
+<body>
+<input type="number" name="liczba1" placeholder="PIERWSZA LICZBA PRZEDZIALU">
+<input type="number" name="liczba2" placeholder="DRUGA LICZBA PRZEDZIALU">
+<button>POKAZ</button>
+<div class="wynik"></div>
+
+<script>
+	
+const diwwynik = document.querySelector('div.wynik');
+const btn = document.querySelector("button");
+	
+const tablica = [];
+	
+btn.addEventListener("click", function(){	
+	
+const liczba1 = document.querySelector('input[name="liczba1"]').value*1;	
+const liczba2 = document.querySelector('input[name="liczba2"]').value*1;
+	
+for(let i=liczba1; i<=liczba2; i++){
+	if(i%2==0){
+		
+		tablica.push(i);
+	}
+}
+	
+for(let i=liczba1; i<=liczba2; i++){
+	if(i%2==1){
+	
+		tablica.push(i);
+	}
+}
+	
+diwwynik.textContent="LICZBY: "+tablica;	
+	
+});	
+	
+
+
+</script>
+</body>
+</html>

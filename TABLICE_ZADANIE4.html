@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tablice</title>
+</head>
+
+<body>
+<input type="number" name="liczba">
+<button>POKAZ</button>
+<div class="wynik"></div>
+<div class="najmniejsza"></div>
+<div class="najwieksza"></div>
+
+
+<script>
+	
+function getRandomIntInclusive(min, max) {
+
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+
+}	
+	
+const tablica = [];
+	
+const btn = document.querySelector("button");
+const diwwynik = document.querySelector("div.wynik");
+const diwnajwieksza = document.querySelector("div.najwieksza");
+const diwnajmniejsza = document.querySelector("div.najmniejsza");	
+	
+btn.addEventListener("click", function(){
+	
+	const iloscliczb = document.querySelector('input[name="liczba"]').value*1;
+	
+	 for(let i=0; i<iloscliczb; i++){
+
+        tablica[i]=getRandomIntInclusive(0,100);
+    }
+	
+	let min = tablica[0];
+    for (let i = 0; i < tablica.length; i++) {
+    if (tablica[i] < min) {
+        min = tablica[i];
+    }
+		
+    }
+	let max = tablica[0];
+    for (let i = 0; i < tablica.length; i++) {
+    if (tablica[i] > max) {
+        max = tablica[i];
+    }
+    }
+	
+    diwwynik.textContent="LICZBY LOSOWE: "+tablica;
+	diwnajmniejsza.textContent="NAJMNIEJSZA LICZBA: "+min;
+	diwnajwieksza.textContent="NAJWIEKSZA LICZBA: "+max;
+	
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tablice</title>
+</head>
+
+<body>
+<div class="wynik1"></div>
+<br>
+<div class="wynik2"></div>
+<script>
+	
+//1WERSJA
+	
+const diwwynik1 = document.querySelector('div.wynik1');
+	
+const tab1 = [];
+	
+for(let i=1; i<=10; i++){
+	
+	tab1.push(i);
+}
+
+diwwynik1.textContent="ELEMENTY PIERWSZEJ TABLICY: "+tab1.join(", ");
+
+//2WERSJA
+	
+const diwwynik2 = document.querySelector('div.wynik2');
+	
+const tab2 = [];
+	
+for(let x=100; x>=90; x--){
+	
+	tab2.push(x);
+}
+
+diwwynik2.textContent="ELEMENTY DRUGIEJ TABLICY: "+tab2.join(", ");
+	
+</script>
+</body>
+</html>

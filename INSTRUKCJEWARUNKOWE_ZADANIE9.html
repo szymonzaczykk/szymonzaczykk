@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>INSTRUKCJEWARUNKOWE</title>
+</head>
+
+<body>
+<input type="number" name="a" placeholder="A">
+<input type="number" name="b" placeholder="B">
+<input type="number" name="c" placeholder="C">
+<button>OBLICZ</button>
+
+<div class="zmienna"></div>
+<div class="pierwiastekdelta"></div>
+<div class="x1"></div>
+<div class="x2"></div>
+    
+<script>
+    
+const diwwynik = document.querySelector("div.zmienna");
+const diwpierwiastek = document.querySelector("div.pierwiastekdelta");
+const diwx1 = document.querySelector("div.x1"); 
+const diwx2 = document.querySelector("div.x2"); 
+const btn = document.querySelector("button");
+let wynik = 0;
+let pierwiastekzdelty=0;
+let x1=0;
+let x2=0;
+
+btn.addEventListener("click", function(){
+    
+    
+    let a = document.querySelector('input[name="a"]').value*1;
+    let b = document.querySelector('input[name="b"]').value*1;
+    let c = document.querySelector('input[name="c"]').value*1;
+    
+    wynik=(b*b)-(4*a*c);
+    
+    diwwynik.textContent="DELTA: "+wynik;
+    
+    
+    if(wynik<0){
+    
+        diwpierwiastek.textContent="PIERWIASTEK Z DELTY: BRAK ";
+        diwx1.textContent="X1: BRAK";
+        diwx2.textContent="X2: BRAK";
+        
+    }
+    else{
+        
+        pierwiastekzdelty=Math.sqrt(wynik);
+        x1=((-b)-pierwiastekzdelty)/(2*a);
+        x2=((-b)+pierwiastekzdelty)/(2*a);
+        
+        diwpierwiastek.textContent="PIERWIASTEK Z DELTY: "+pierwiastekzdelty;
+        diwx1.textContent="X1: "+x1;
+        diwx2.textContent="X2: "+x2;
+    }
+    
+});
+
+    
+</script>
+</body>
+</html>

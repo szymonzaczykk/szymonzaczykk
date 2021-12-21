@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>INSTRUKCJEWARUNKOWE</title>
+</head>
+
+<body>
+<script>
+
+    let zmienna = prompt("WYBIERZ RODZAJ FIGURY: T-TRÓJKĄT, K-KWADRAT, P-PROSTOKĄT");
+    
+    switch(zmienna){
+            
+        case 'T':
+            document.write("WYBRANO TRÓJKĄT"+"<br>");
+            let a = prompt("WPROWADZ DLUGOSC PODSTAWY TROJKATA");
+            let h = prompt("WPROWADZ WYSOKOSC TROJKATA");
+            let wynik = (a*h)/2;
+            document.write("POLE TROJKATA O PODSTAWIE: "+a+"&nbsp;"+"WYSOKOSCI: "+h+"&nbsp;"+"WYNOSI: "+wynik);
+            break;
+        case 'K':
+            document.write("WYBRANO KWADRAT"+"<br>");
+            let x = prompt("PODAJ BOK KWADRATU");
+            let kwadrat = (x*x);
+            document.write("POLE KWADRATU O BOKU: "+x+"&nbsp;"+"WYNOSI: "+kwadrat);
+            break;
+        case 'P':
+            document.write("WYBRANO PROSTOKĄT"+"<br>");
+            let y = prompt("PODAJ PIERWSZY BOK");
+            let z = prompt("PODAJ DRUGI BOK");
+            let prostokat = (y*z);
+            document.write("POLE PROSTOKATU O BOKACH: "+y+"&nbsp;"+"i"+"&nbsp;"+z+"&nbsp;"+"WYNOSI: "+prostokat);
+            break;
+    }
+
+    
+</script>
+</body>
+</html>

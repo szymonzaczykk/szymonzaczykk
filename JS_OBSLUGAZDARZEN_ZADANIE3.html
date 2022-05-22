@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZADANIE</title>
+</head>
+<body>
+
+    <p id="first" style="background-color: black; color:white; text-align: center;">SZYMONZACZYK</p>
+
+    <script>
+
+        const firstp = document.getElementById("first");
+
+        function najechanie(){
+            firstp.style.backgroundColor="red";
+        }
+        function opuszczenie(){
+            firstp.style.backgroundColor="black";
+        }
+
+        firstp.onmouseover = najechanie;
+        firstp.onmouseout = opuszczenie;
+
+    </script>
+    
+</body>
+</html>

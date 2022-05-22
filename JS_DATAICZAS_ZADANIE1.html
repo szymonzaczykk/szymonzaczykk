@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZADANIE1</title>
+</head>
+<body>
+
+    <h2>BIEZACA DATA</h2>
+    <div id="wynik"></div>
+
+    <script>
+
+    const data = new Date();
+
+    let rok = data.getFullYear();
+    let miesiac = data.getMonth()+1;
+    let dzien = data.getDate();
+
+    document.getElementById("wynik").innerHTML = `${rok}/${miesiac}/${dzien}`;
+
+  
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZADANIE</title>
+</head>
+<body>
+
+    <h2>WYBIERZ SWOJE ULUBIONE KOLORY</h2>
+
+    <form action="" method="post">
+        <div><input type="checkbox" id="first"><label>CZARNY</label></div>
+        <div><input type="checkbox" id="second"><label>CZERWONY</label></div>
+        <div><input type="checkbox" id="third"><label>NIEBIESKI</label></div>
+        <button id="przycisk">WYSLIJ</button>
+    </form>
+
+    <div id="wynik"></div>
+
+    <script>
+        const form = document.querySelectorAll('form');
+        const diwwynik = document.getElementById("wynik");
+
+        const firstcheckbox = document.getElementById("first");
+        const secondcheckbox = document.getElementById("second");
+        const thirdcheckbox = document.getElementById("third");
+
+        var czarny = document.createTextNode(" CZARNY ");
+        var czerwony = document.createTextNode(" CZERWONY ");
+        var niebieski = document.createTextNode(" NIEBIESKI ");
+
+        const przycisk = document.getElementById("przycisk");
+
+        przycisk.onclick = wyswietlanie;
+
+        function wyswietlanie(event){
+
+        diwwynik.innerText=" ";
+        event.preventDefault();
+
+        if(firstcheckbox.checked == true){
+            diwwynik.appendChild(czarny);
+        }
+        if(secondcheckbox.checked == true){
+            diwwynik.appendChild(czerwony);
+        }
+        if(thirdcheckbox.checked == true){
+            diwwynik.appendChild(niebieski);
+        }
+        
+        };
+
+
+    </script>
+    
+</body>
+</html>

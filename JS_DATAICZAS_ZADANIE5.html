@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZADANIE2</title>
+</head>
+<body>
+
+    <h2>BIEZACA DZIEN</h2>
+    <div id="wynik"></div>
+
+    <script>
+
+    const data = new Date();
+    
+    let godzina = data.getHours();
+    let minuta = data.getMinutes();
+    let sekunda = data.getSeconds();
+
+    document.getElementById("wynik").innerText=`${godzina}:${minuta}:${sekunda}`;
+
+  
+    </script>
+    
+</body>
+</html>

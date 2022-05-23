@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <title>ZADANIE</title>
+</head>
+<body>
+
+    <h3>WPROWADZ ZDANIE</h3>
+
+    <form action="" method="post">
+        <input type="text" name="zdanie" id="zdanie">
+        <input type="submit" name="wyslij" id="wyslij" value="WYSLIJ">
+        <input type="reset" value="WYCZYSC POLE">
+    </form>
+
+    <div id="wynik">
+
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const przycisk = document.getElementById("wyslij");
+
+       
+
+        const diwwynik = document.getElementById('wynik');
+
+        przycisk.addEventListener("click", dodawaniedostrony);
+
+        function dodawaniedostrony(event){
+
+        event.preventDefault();
+
+        $('#wynik').append('<p>WPROWADZONO ZDANIE:</p>').append(document.getElementById("zdanie").value);
+            
+        };
+
+    </script>
+    
+</body>
+</html>
